@@ -1,0 +1,36 @@
+@import "../../assets/styles/DefultStyles.scss";
+.aboutSection{
+  width: $width;
+  padding: 150px 100px;
+  display: flex;
+  justify-content: center;
+  .aboutHead{
+    width: 40%;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    h2{
+      position: relative;
+      &::after{
+        content: "★";
+        position: absolute;
+        color: gold;
+        top: -0.5rem;
+        right: 1rem;
+        font-size: 1.1rem;
+      }
+    }
+  }
+  .aboutTextWrapper{
+    width: 60%;
+    h3{
+      font-size: 1.4rem;
+    }
+    p{
+    text-indent: 1rem;
+
+      font-size: 1.2rem
+    }
+  }
+}

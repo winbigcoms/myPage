@@ -1,0 +1,18 @@
+// @import "../../assets/styles/DefultStyles.scss";
+.header{
+  position: fixed;
+  top: 0px;
+  right: 20PX;
+  display: flex;
+  height: 50PX;
+  justify-content: space-between;
+  background-color: rgba(0,0,0,0.6);
+  border-radius: 0 0 5px 5px;
+  z-index: 1;
+  li{
+    color: #fff;
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    font-weight: bold;
+  }
+}
