@@ -1,4 +1,10 @@
-// @import "../../assets/styles/DefultStyles.scss";
+@import "../../assets/styles/DefultStyles.scss";
+.off{
+  display: none;
+}
+.on{
+  display: block;
+}
 .header{
   position: fixed;
   top: 0px;
@@ -9,10 +15,16 @@
   background-color: rgba(0,0,0,0.6);
   border-radius: 0 0 5px 5px;
   z-index: 1;
+
   li{
     color: #fff;
     font-size: 1.2rem;
     padding: 10px 20px;
     font-weight: bold;
+  }
+}
+@media(max-width:$media){
+  .header{
+    display: none;
   }
 }

@@ -43,6 +43,14 @@ export default function Skills(){
             </li>
           </ul>
         </li>
+        <li className={styles.skillSet}>
+          <h3>Database</h3>
+          <ul className={styles.skillBox}>
+            <li>
+              <img src="./assets/images/mysqllogo512.jpg" alt="mysql"/>
+            </li>
+          </ul>
+        </li>
       </ul>
     </section>
   )

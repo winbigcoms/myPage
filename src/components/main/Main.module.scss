@@ -10,17 +10,21 @@
     width: $width;
     height: $height;
     background-color: rgba(0,0,0,0.7);
+    display: flex;
+    justify-content: center;
+
     .headingBox{
-      margin-top: calc(25% - 32px);
+      position: sticky;
+      top: 0;
       display: flex;
       justify-content: center;
+      align-items: center;
       .heading{
-        position: sticky;
-        top: 0;
+
         display: inline-block;
         text-align: center;
         color: #fff;
-        font-size:4rem;
+        font-size:4vw;
         animation: typingCursur infinite 1.5s;
       }
     }
