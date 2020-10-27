@@ -6,6 +6,15 @@
   h2{
     text-align: center;
     font-size: 3rem;
+    position: relative;
+    &::after{
+      content: "★";
+      position: absolute;
+      color: gold;
+      top: -0.5rem;
+      right: calc(50% - 40px);
+      font-size: 1.1rem;
+    }
   }
   .skillWrapper{
     .skillSet{
