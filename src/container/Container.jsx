@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useLayoutEffect, useState } from 'react';
 import About from '../components/about/About';
 import GotopBtn from '../components/goTop/GotopBtn';
 import Header from '../components/header/Header';
@@ -8,12 +8,21 @@ import Skills from '../components/skills/Skills';
 
 export default function Container(){
   const [offsets,setOffsets] = useState({});
+  const [height,setWidth]=useState(window.innerHeight);
+  useLayoutEffect(()=>{
+    function updateSize() {
+      setWidth(window.innerHeight);
+    }
+    window.addEventListener('resize', updateSize);
+    updateSize();
+    return () => window.removeEventListener('resize', updateSize);
+  },[height])
   return(
     <>
       <Header offsets={offsets}/>
       <Main setOffsets={setOffsets}/>
-      <About/>
-      <Skills/>
+      <About setOffsets={setOffsets}/>
+      <Skills setOffsets={setOffsets}/>
       <Projects setOffsets={setOffsets}/>
       <GotopBtn/>
     </>

@@ -1,9 +1,18 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
+import useResizeRander from '../../customHooks/useResizeRander';
 import styles from './About.module.scss';
 
-export default function About(){
+export default function About({setOffsets}){
+  const about = useRef(null);
+  useResizeRander(setOffsets,about)
+  useEffect(()=>{
+    setOffsets(state=>({
+      ...state,[about.current.id]:about.current.offsetTop
+    }))
+  },[setOffsets]);
+
   return (
-    <section className={styles.aboutSection}>
+    <section className={styles.aboutSection} id="about" ref={about}>
       <div className={styles.aboutHead}> 
         <h2>About "나"</h2>
       </div>

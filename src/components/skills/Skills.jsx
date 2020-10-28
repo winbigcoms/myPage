@@ -1,8 +1,17 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
+import useResizeRander from "../../customHooks/useResizeRander";
 import styles from './Skills.module.scss'
-export default function Skills(){
+export default function Skills({setOffsets}){
+  const skills = useRef(null);
+  useResizeRander(setOffsets,skills);
+  useEffect(()=>{
+    setOffsets(state=>({
+      ...state,[skills.current.id]:skills.current.offsetTop
+    }));
+  },[setOffsets]);
+
   return (
-    <section className={styles.skills}>
+    <section className={styles.skills} id="skills" ref={skills}>
       <h2>My Skills</h2>
       <ul className={styles.skillWrapper}>
         <li className={styles.skillSet}>

@@ -11,6 +11,10 @@
   transform: rotate(-135deg);
   background-color: inherit;
   animation: upDown 2s infinite ;
+  cursor: pointer;
+}
+.btn:focus{
+  outline: none;
 }
 .active{
   opacity: 1;

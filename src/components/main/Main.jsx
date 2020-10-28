@@ -3,6 +3,7 @@ import styles from './Main.module.scss';
 export default function Main({setOffsets}){
   const [mainHeader,setHeader] = useState("");
   const main = useRef(null);
+  
   function typeAni(){
     let i =0;
     const typing = setInterval(() =>{
@@ -14,6 +15,7 @@ export default function Main({setOffsets}){
         clearInterval(typing);
       }
     },178)}
+
   useEffect(()=>{
     typeAni();
     setOffsets(state=>({...state,[main.current.id]:main.current.offsetTop}));
