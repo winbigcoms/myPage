@@ -14,7 +14,7 @@ export default function Projects({setOffsets}){
       <ul className={styles.projectsBox}>
         <li className={styles.project}>
           <a className={styles.projectImg} href="https://eottaecinema.herokuapp.com/" title="옷떼시네마 페이지로 이동">
-            <img src="../../assests/images/ET.png" alt="옷떼시네마페이지뷰"/>
+            <img src="./assests/images/ET.png" alt="옷떼시네마페이지뷰"/>
           </a>
           <div className={styles.projectInfo}>
             <h3 className={styles.projectName}>EOTTEA CINEMA</h3>
@@ -27,7 +27,7 @@ export default function Projects({setOffsets}){
               <li>#mysql</li>
             </ul>
             <a href="https://github.com/winbigcoms/EottaeCinema">
-              <img src="../../assests/images/github.png" alt="깃허브 아이콘"/>
+              <img src="./assests/images/github.png" alt="깃허브 아이콘"/>
             </a>
           </div>
         </li>
