@@ -12,21 +12,22 @@
     background-color: rgba(0,0,0,0.7);
     display: flex;
     justify-content: center;
-
-    .headingBox{
-      position: sticky;
-      top: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+    align-items: center;
+    // .headingBox{
+    //   position: sticky;
+    //   top: 0;
+    //   display: flex;
+    //   justify-content: center;
+    //   align-items: center;
       .heading{
-
+        position: sticky;
+        top: 50px;
         display: inline-block;
         text-align: center;
         color: #fff;
         font-size:4vw;
         animation: typingCursur infinite 1.5s;
-      }
+      // }
     }
   }
 }
