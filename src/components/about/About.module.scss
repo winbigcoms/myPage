@@ -29,8 +29,17 @@
     }
     p{
     text-indent: 1rem;
-
-      font-size: 1.2rem
+      font-size: 1.2rem;
+      margin-top: 1.5rem;
+    }
+    a{
+      display: inline-block;
+      margin: auto;
+      margin-top: 2rem;
+      padding: 1rem;
+      border: 1px solid #000;
+      color: #000;
+      text-align: right;
     }
   }
 }
@@ -44,6 +53,8 @@
     .aboutTextWrapper{
       width: 100%;
       padding: 50px 20px;
+      display: flex;
+      flex-direction: column;
       h3{
         font-size: 1.2rem;
         text-align: center;
