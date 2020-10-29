@@ -15,7 +15,7 @@ export default function Projects({setOffsets}){
       <ul className={styles.projectsBox}>
         <li className={styles.project} data-aos="fade-up">
           <a className={styles.projectImg} href="https://eottaecinema.herokuapp.com/" title="옷떼시네마 페이지로 이동">
-            <img src="./assets/images/ET.png" alt="옷떼시네마페이지뷰"/>
+            <img src="./assets/images/ET.png" alt="옷떼시네마페이지뷰"  loading="lazy"/>
           </a>
           <div className={styles.projectInfo}>
             <h3 className={styles.projectName}>EOTTEA CINEMA</h3>
