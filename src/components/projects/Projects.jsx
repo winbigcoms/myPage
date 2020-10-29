@@ -19,14 +19,14 @@ export default function Projects({setOffsets}){
           <div className={styles.projectInfo}>
             <h3 className={styles.projectName}>EOTTEA CINEMA</h3>
             <p>프로젝트 기간: <time dateTime="2020-08-24">2020.08.24</time> ~ <time dateTime="2020-09-23">2020.09.23</time></p>
-            <p className={styles.projectPR}>영화 예매 사이트 롯데시네마 클론 코딩.</p>
+            <p className={styles.projectPR}>React + Redux + node.js(Express) + Mysql을 이용하여 로그인, 영화예매, 영화 후기 등의 기능을 구현한 롯데시네마 클론코딩페이지</p>
             <ul className={styles.projectSkill}>
               <li>#React</li>
               <li>#Redux</li>
               <li>#node.js(express)</li>
               <li>#mysql</li>
             </ul>
-            <a href="https://github.com/winbigcoms/EottaeCinema">
+            <a href="https://github.com/winbigcoms/EottaeCinema" className={styles.githubIcon}>
               <img src="./assets/images/github.png" alt="깃허브 아이콘"/>
             </a>
           </div>
