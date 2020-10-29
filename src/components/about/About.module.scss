@@ -34,3 +34,26 @@
     }
   }
 }
+@media(max-width:$media){
+  .aboutSection{
+    flex-direction: column;
+    padding: 50px 10px;
+    .aboutHead{
+      width: 100%;
+    }
+    .aboutTextWrapper{
+      width: 100%;
+      padding: 50px 20px;
+      h3{
+        font-size: 1.2rem;
+        text-align: center;
+        margin-bottom: 30px;
+      }
+      p{
+        font-size: 1rem;
+        margin-bottom: 1rem;
+      }
+    }
+  }
+
+}

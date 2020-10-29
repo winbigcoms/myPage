@@ -1,3 +1,4 @@
+@import "../../assets/styles/DefultStyles.scss";
 .contact{
   margin-top: 100px;
   padding: 150px 150px 300px;
@@ -5,21 +6,34 @@
   height: 40vh;
   text-align: center;
   background-color: rgba(80, 214, 255, 0.205);
-}
-.contactHeading{
-  position: relative;
-  font-size: 4rem;
-  &::after{
-    content: "★";
-    position: absolute;
-    color: gold;
-    top: 15px;
-    right: calc(50% + 3rem);
-    font-size: 1.1rem;
+  overflow: hidden;
+  .contactHeading{
+    position: relative;
+    font-size: 4rem;
+    &::after{
+      content: "★";
+      position: absolute;
+      color: gold;
+      top: 15px;
+      right: calc(50% + 3rem);
+      font-size: 1.1rem;
+    }
+  }
+  .contactEmail{
+    margin-top: 50px;
+    font-weight: bold;
+    font-size: 2rem;
   }
 }
-.contactEmail{
-  margin-top: 50px;
-  font-weight: bold;
-  font-size: 2rem;
+@media(max-width:$media){
+  .contact{
+    padding: 40px 20px;
+    height: 50vh;
+    .contactHeading{
+      font-size: 4rem;
+    }
+    .contactEmail{
+      font-size: 1rem;
+    }
+  }
 }

@@ -1,12 +1,37 @@
 @import "../../assets/styles/DefultStyles.scss";
 .off{
-  display: none;
+  display: none !important;
 }
 .on{
   display: block;
 }
-head{
+button:focus{
+  outline: none;
+}
+header{
+  height: 50px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
   overflow: hidden;
+  button{
+    z-index: 1;
+    border: 0;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 50px;
+    height: 30px;
+    background-color: inherit;
+    span{
+      display: inline-block;
+      background-color: #aaa;
+      width: 80%;
+      height: 5px;
+      border-radius: 2px;
+    }
+  }
 }
 .header{
   position: fixed;
@@ -18,7 +43,7 @@ head{
   background-color: rgba(0,0,0,0.6);
   border-radius: 0 0 5px 5px;
   z-index: 1;
-  animation: openingHead 1.2s ease-in-out both;
+  animation: openingHeadDesk 1.2s ease-in-out both;
   li{
     color: #fff;
     font-size: 1.2rem;
@@ -29,14 +54,40 @@ head{
 }
 @media(max-width:$media){
   .header{
-    display: none;
+    top: 70px;
+    right: 0;
+    flex-direction: column;
+    background-color: #ccc;
+    height: 320px;
+    border-radius: 15px 0 0 15px;
+    transform: translateX(100%);
+    animation: closingHeadMobile 0.5s ease-in both;
+    &.openNav{
+      animation: openingHeadMobile 0.5s ease-in-out both;
+    }
   }
 }
-@keyframes openingHead{
+@keyframes openingHeadDesk{
   0%{
     transform: translateY(-50px);
   }
   100%{
     transform: translateY(0px);
+  }
+}
+@keyframes openingHeadMobile{
+  0%{
+    transform: translateX(100%);
+  }
+  100%{
+    transform: translateX(0px);
+  }
+}
+@keyframes closingHeadMobile{
+  0%{
+    transform: translateX(0);
+  }
+  100%{
+    transform: translateX(100%);
   }
 }

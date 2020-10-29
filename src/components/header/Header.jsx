@@ -1,9 +1,9 @@
 import React, { useCallback, useLayoutEffect, useState } from "react";
 import style from "./header.module.scss";
 
-export default function Header({offsets,height}){
-  const [navState,setNavState]= useState(true);
-  
+export default function Header({offsets}){
+  const [navBtnState,setNavBtnState]= useState(true);
+  const [navVisibleState,setNavVisible] = useState(true);
   const scrolling = useCallback((e)=>{
     window.scrollTo({
       top:offsets[e.target.id],
@@ -14,22 +14,31 @@ export default function Header({offsets,height}){
   useLayoutEffect(()=>{
     function checkWidth(){
      if(window.innerWidth > 850){
-       setNavState(true)
+      setNavBtnState(()=>true);
+      setNavVisible(()=>true);
+     }else{
+        setNavVisible(()=>false);
+        setNavBtnState(() => false);
       };
-   }
+    }
    checkWidth();
    window.addEventListener("resize",checkWidth);
    return ()=>{
      window.removeEventListener("resize",checkWidth);
    }
-  },[height])
+  },[])
+
+  const toggleNav =useCallback((e)=>{
+    setNavVisible(state=>!state);
+  },[])
   return(
     <header>
       <h2 className={style.a11yHidden}>메인 네비게이션</h2>
-      <button className={navState?style.off:style.on}>
-        <span></span>
+      <button className={navBtnState?style.off:style.on} onClick={toggleNav}>
+        <span className={style.buger}></span>
+        <span className={style.buger}></span>
       </button>
-      <ul className={style.header} onClick={scrolling}>
+      <ul className={navVisibleState ? [style.header,style.openNav].join(" "): style.header} onClick={scrolling}>
         <li id="main">
             Home
         </li>
@@ -46,7 +55,9 @@ export default function Header({offsets,height}){
           Contact
         </li>
         <li>
-          more...?
+          <a href="https://github.com/winbigcoms?tab=repositories" title="백승일 깃허브로 이동!">
+            more...?
+          </a>
         </li>
       </ul>
     </header>
