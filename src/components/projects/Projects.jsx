@@ -26,7 +26,7 @@ export default function Projects({setOffsets}){
               <li>#node.js(express)</li>
               <li>#mysql</li>
             </ul>
-            <a href="https://github.com/winbigcoms/EottaeCinema" className={styles.githubIcon}>
+            <a href="https://github.com/winbigcoms/EottaeCinema"title="옷떼시네마 깃허브로 이동" className={styles.githubIcon}>
               <img src="./assets/images/github.png" alt="깃허브 아이콘"/>
             </a>
           </div>

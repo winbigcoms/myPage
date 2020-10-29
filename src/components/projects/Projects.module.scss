@@ -31,7 +31,6 @@
       margin-bottom: 50px;
       transition: all 0.3s;
       display: flex;
-      cursor: pointer;
       overflow: hidden;
       &:hover{
         box-shadow: 0px 1px 1px 1px#000;
@@ -46,7 +45,8 @@
         }
       }
       .projectInfo{
-        padding: 1rem;
+        width: 60%;
+        padding: 1rem 2rem;
         .projectName{
           font-size: 2rem;
           margin-bottom: 2rem;

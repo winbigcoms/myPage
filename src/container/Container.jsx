@@ -1,5 +1,6 @@
 import React, { useLayoutEffect, useState } from 'react';
 import About from '../components/about/About';
+import Contact from '../components/contact/Contact';
 import GotopBtn from '../components/goTop/GotopBtn';
 import Header from '../components/header/Header';
 import Main from '../components/main/Main';
@@ -24,6 +25,7 @@ export default function Container(){
       <About setOffsets={setOffsets}/>
       <Skills setOffsets={setOffsets}/>
       <Projects setOffsets={setOffsets}/>
+      <Contact setOffsets={setOffsets}/>
       <GotopBtn/>
     </>
   )

@@ -42,7 +42,7 @@ export default function Header({offsets,height}){
         <li id="project">
           Project
         </li>
-        <li>
+        <li id="contact">
           Contact
         </li>
         <li>

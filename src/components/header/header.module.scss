@@ -5,6 +5,9 @@
 .on{
   display: block;
 }
+head{
+  overflow: hidden;
+}
 .header{
   position: fixed;
   top: 0px;
@@ -15,7 +18,7 @@
   background-color: rgba(0,0,0,0.6);
   border-radius: 0 0 5px 5px;
   z-index: 1;
-
+  animation: openingHead 1.2s ease-in-out both;
   li{
     color: #fff;
     font-size: 1.2rem;
@@ -27,5 +30,13 @@
 @media(max-width:$media){
   .header{
     display: none;
+  }
+}
+@keyframes openingHead{
+  0%{
+    transform: translateY(-50px);
+  }
+  100%{
+    transform: translateY(0px);
   }
 }
