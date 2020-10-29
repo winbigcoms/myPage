@@ -6,6 +6,7 @@ import Header from '../components/header/Header';
 import Main from '../components/main/Main';
 import Projects from '../components/projects/Projects';
 import Skills from '../components/skills/Skills';
+import "../assets/styles/DefultStyles.scss";
 
 export default function Container(){
   const [offsets,setOffsets] = useState({});
