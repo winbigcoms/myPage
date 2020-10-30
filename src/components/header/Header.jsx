@@ -1,4 +1,4 @@
-import React, { useCallback, useLayoutEffect, useState } from "react";
+import React, { useCallback, useEffect, useLayoutEffect, useState } from "react";
 import style from "./header.module.scss";
 
 export default function Header({offsets}){
@@ -30,7 +30,17 @@ export default function Header({offsets}){
      window.removeEventListener("resize",checkWidth);
    }
   },[])
-
+  useEffect(()=>{
+    function closeNavMobile(e){
+      if(navVisibleState && !e.target.matches(".header")){
+        setNavVisible(()=>false);
+      }
+    }
+    window.addEventListener("click",closeNavMobile);
+    return ()=>{
+      window.removeEventListener("click",closeNavMobile);
+    }
+  },[navVisibleState])
   const toggleNav =useCallback((e)=>{
     setNavVisible(state=>!state);
   },[])
