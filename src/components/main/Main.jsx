@@ -23,9 +23,7 @@ export default function Main({setOffsets}){
   return (
     <main className={styles.main} ref={main} id="main">
       <div className={styles.headingWrap}>
-        {/* <div className={styles.headingBox}> */}
           <h1 className={styles.heading}>{mainHeader}</h1>
-        {/* </div> */}
       </div>
     </main>
   )
