@@ -2,8 +2,11 @@ import React, { useCallback, useLayoutEffect, useState } from "react";
 import style from "./header.module.scss";
 
 export default function Header({offsets}){
+  // 뷰포트에 따라 버튼 보이기
   const [navBtnState,setNavBtnState]= useState(true);
+  // 모바일에서 네비게이션 보이기
   const [navVisibleState,setNavVisible] = useState(true);
+
   const scrolling = useCallback((e)=>{
     window.scrollTo({
       top:offsets[e.target.id],
@@ -32,9 +35,9 @@ export default function Header({offsets}){
     setNavVisible(state=>!state);
   },[])
   return(
-    <header>
+    <header className={navBtnState?style.off:style.on}>
       <h2 className="a11yHidden">메인 네비게이션</h2>
-      <button className={navBtnState?style.off:style.on} onClick={toggleNav}>
+      <button className={navVisibleState ? style.openBtn:style.defaultBtn} onClick={toggleNav}>
         <span className={style.buger}></span>
         <span className={style.buger}></span>
       </button>
