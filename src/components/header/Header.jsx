@@ -33,7 +33,7 @@ export default function Header({offsets}){
   },[])
   return(
     <header>
-      <h2 className={style.a11yHidden}>메인 네비게이션</h2>
+      <h2 className="a11yHidden">메인 네비게이션</h2>
       <button className={navBtnState?style.off:style.on} onClick={toggleNav}>
         <span className={style.buger}></span>
         <span className={style.buger}></span>

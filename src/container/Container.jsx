@@ -7,6 +7,7 @@ import Main from '../components/main/Main';
 import Projects from '../components/projects/Projects';
 import Skills from '../components/skills/Skills';
 import "../assets/styles/DefultStyles.scss";
+import Opening from '../components/opening/Opening';
 
 export default function Container(){
   const [offsets,setOffsets] = useState({});
@@ -21,6 +22,7 @@ export default function Container(){
   },[height])
   return(
     <>
+      <Opening/>
       <Header offsets={offsets}/>
       <Main setOffsets={setOffsets}/>
       <About setOffsets={setOffsets}/>
