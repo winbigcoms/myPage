@@ -60,12 +60,16 @@
             margin-right: 10px;
           }
         }
-        .githubIcon{
-          display: inline-block;
-          width: 2rem;
-          height: 2rem;
-          img{
+        .linkBox{
+          display: flex;
+          
+          a{
+            display: inline-block;
             width: 2rem;
+            height: 2rem;
+            img{
+              width: 2rem;
+            }
           }
         }
       }
