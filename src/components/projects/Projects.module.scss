@@ -62,12 +62,15 @@
         }
         .linkBox{
           display: flex;
-          
+
           a{
             display: inline-block;
             width: 2rem;
             height: 2rem;
+            color: #000;
+            margin-right: 30px;
             img{
+              border-radius: 1rem;
               width: 2rem;
             }
           }
