@@ -32,7 +32,7 @@ export default function Projects({setOffsets}){
                 <img src="./assets/images/github.png" alt="깃허브 아이콘"/>
               </a>
               <a title="velog 프로젝트 과정/후기 보러가기" href="https://velog.io/@winbigcoms/%ED%8C%A8%EC%8A%A4%ED%8A%B8-%EC%BA%A0%ED%8D%BC%EC%8A%A4-%ED%94%84%EB%A1%A0%ED%8A%B8%EC%97%94%EB%93%9C-%EC%8A%A4%EC%BF%A8-%EC%B5%9C%EC%A2%85-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%ED%9B%84%EA%B8%B0">
-                <img src="./assets/images/velog.png" alt="velog 프로젝트 과정/후기 보러가기"/>
+                <img src="./assets/images/velog.jpg" alt="velog 프로젝트 과정/후기 보러가기"/>
               </a>
             </div>
           </div>
