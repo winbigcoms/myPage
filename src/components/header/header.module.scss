@@ -85,11 +85,12 @@ header{
       background-color: #ccc;
       height: 320px;
       border-radius: 15px 0 0 15px;
-      opacity: 0;
-      transform: translateX(100%);
-      animation: closingHeadMobile 0.5s ease-in both;
+      transform: translateX(110%);
+      animation: none;
+      transition: all 0.5s;
       &.openNav{
-        animation: openingHeadMobile 0.5s ease-in-out both;
+        animation: none;
+        transform: translateX(0);
       }
     }
   }
@@ -100,26 +101,5 @@ header{
   }
   100%{
     transform: translateY(0px);
-  }
-}
-@keyframes openingHeadMobile{
-  0%{
-    transform: translateX(100%);
-    opacity: 1;
-  }
-  100%{
-    transform: translateX(0px);
-    opacity: 1;
-  }
-}
-@keyframes closingHeadMobile{
-  0%{
-    transform: translateX(0);
-    opacity: 1;
-
-  }
-  100%{
-    transform: translateX(100%);
-    opacity: 1;
   }
 }
