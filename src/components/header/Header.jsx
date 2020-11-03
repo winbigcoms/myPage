@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useLayoutEffect, useState } from "react";
+import React, { useCallback, useEffect, useLayoutEffect, useRef, useState } from "react";
 import style from "./header.module.scss";
 
 export default function Header({offsets}){
@@ -6,6 +6,7 @@ export default function Header({offsets}){
   const [navBtnState,setNavBtnState]= useState(true);
   // 모바일에서 네비게이션 보이기
   const [navVisibleState,setNavVisible] = useState(true);
+  const firstClick = useRef(0);
 
   const scrolling = useCallback((e)=>{
     window.scrollTo({
@@ -30,6 +31,7 @@ export default function Header({offsets}){
      window.removeEventListener("resize",checkWidth);
    }
   },[])
+
   useEffect(()=>{
     function closeNavMobile(e){
       if(navVisibleState && !e.target.matches(".header")){
@@ -41,9 +43,12 @@ export default function Header({offsets}){
       window.removeEventListener("click",closeNavMobile);
     }
   },[navVisibleState])
+
   const toggleNav =useCallback((e)=>{
+    firstClick.current++;
     setNavVisible(state=>!state);
   },[])
+
   return(
     <header className={navBtnState?style.off:style.on}>
       <h2 className="a11yHidden">메인 네비게이션</h2>
@@ -51,7 +56,7 @@ export default function Header({offsets}){
         <span className={style.buger}></span>
         <span className={style.buger}></span>
       </button>
-      <ul className={navVisibleState ? [style.header,style.openNav].join(" "): style.header} onClick={scrolling}>
+      <ul className={navVisibleState ? [style.header,style.openNav].join(" "): firstClick.current ? style.header :style.firstHeader} onClick={scrolling}>
         <li id="main">
             Home
         </li>

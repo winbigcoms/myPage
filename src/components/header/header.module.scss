@@ -1,12 +1,12 @@
 @import "../../assets/styles/DefaultStyleVariables.scss";
-.off button{
-  display: none !important;
-}
-.on button{
-  display: block;
-}
 
 header{
+  &.off button{
+    display: none ;
+  }
+  &.on button{
+    display: block;
+  }
   height: 50px;
   width: 100%;
   position: absolute;
@@ -66,7 +66,7 @@ header{
     background-color: rgba(0,0,0,0.6);
     border-radius: 0 0 5px 5px;
     z-index: 1;
-    animation: openingHeadDesk 1.2s ease-in-out both;
+    animation: openingHeadDesk 1.2s ease-in-out both;  
     li{
       color: #fff;
       font-size: 1.2rem;
@@ -78,18 +78,21 @@ header{
 }
 @media(max-width:$media){
   header{
-      .header{
+    .firstHeader{
+      display: none;
+    }
+    .header{
+      // transition: transform 0.5s;
+      transform: translateX(110%);
       top: 70px;
       right: 0;
       flex-direction: column;
       background-color: #ccc;
       height: 320px;
       border-radius: 15px 0 0 15px;
-      transform: translateX(110%);
-      animation: none;
-      transition: all 0.5s;
+      animation: closingHeadMobile 0.5s both;
       &.openNav{
-        animation: none;
+        animation: openingHeadMobile 0.5s both;
         transform: translateX(0);
       }
     }
@@ -101,5 +104,21 @@ header{
   }
   100%{
     transform: translateY(0px);
+  }
+}
+@keyframes openingHeadMobile{
+  0%{
+    transform: translateX(100%);
+  }
+  100%{
+    transform: translateX(0);
+  }  
+}
+@keyframes closingHeadMobile{
+  0%{
+    transform: translateX(0);
+  }
+  100%{
+    transform: translateX(100%);
   }
 }
