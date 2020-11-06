@@ -22,6 +22,7 @@ export default function Container(){
   },[height])
   return(
     <>
+      <h1 className="a11yHidden">백승일 포트폴리오 페이지</h1>
       <Opening/>
       <Header offsets={offsets}/>
       <Main setOffsets={setOffsets}/>

@@ -20,6 +20,7 @@ export default function Header({offsets}){
      if(window.innerWidth > 850){
       setNavBtnState(()=>true);
       setNavVisible(()=>true);
+      firstClick.current = 0;
      }else{
         setNavVisible(()=>false);
         setNavBtnState(() => false);
@@ -39,6 +40,9 @@ export default function Header({offsets}){
       }
     }
     window.addEventListener("click",closeNavMobile);
+    if(navBtnState){
+      window.removeEventListener("click",closeNavMobile);
+    }
     return ()=>{
       window.removeEventListener("click",closeNavMobile);
     }
