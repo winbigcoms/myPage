@@ -62,16 +62,19 @@
         }
         .linkBox{
           display: flex;
-
-          a{
-            display: inline-block;
-            width: 2rem;
-            height: 2rem;
-            color: #000;
-            margin-right: 15px;
-            img{
-              border-radius: 1rem;
+          .linkList{
+            display: flex;
+            
+            a{
+              display: inline-block;
               width: 2rem;
+              height: 2rem;
+              color: #000;
+              margin-right: 15px;
+              img{
+                border-radius: 1rem;
+                width: 2rem;
+              }
             }
           }
         }

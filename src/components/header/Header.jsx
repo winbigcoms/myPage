@@ -6,15 +6,16 @@ export default function Header({offsets}){
   const [navBtnState,setNavBtnState]= useState(true);
   // 모바일에서 네비게이션 보이기
   const [navVisibleState,setNavVisible] = useState(true);
+  // 데스크탑에서 모바일 뷰로 변경될 시 네비 애니메이션이 보이는 걸 방지하기 위한 버튼 클릭 횟수       
   const firstClick = useRef(0);
-
+// 섹션 이동
   const scrolling = useCallback((e)=>{
     window.scrollTo({
       top:offsets[e.target.id],
       behavior: "smooth"
     })
   },[offsets]);
-  
+  // 뷰포트 변경시 모바일 뷰 해제
   useLayoutEffect(()=>{
     function checkWidth(){
      if(window.innerWidth > 850){
@@ -32,7 +33,7 @@ export default function Header({offsets}){
      window.removeEventListener("resize",checkWidth);
    }
   },[])
-
+// 모바일 뷰에서 네비 외부 클릭시 닫히는 로직
   useEffect(()=>{
     function closeNavMobile(e){
       if(navVisibleState && !e.target.matches(".header")){
@@ -40,6 +41,7 @@ export default function Header({offsets}){
       }
     }
     window.addEventListener("click",closeNavMobile);
+    // 데스크탑 뷰가 되면 제거
     if(navBtnState){
       window.removeEventListener("click",closeNavMobile);
     }
@@ -47,7 +49,7 @@ export default function Header({offsets}){
       window.removeEventListener("click",closeNavMobile);
     }
   },[navVisibleState])
-
+// 최초 네비 버튼 클릭 감지, 최초 네비게이션 섹션은 display:none상태, 누르면 바뀜
   const toggleNav =useCallback((e)=>{
     firstClick.current++;
     setNavVisible(state=>!state);
