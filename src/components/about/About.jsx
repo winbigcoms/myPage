@@ -31,8 +31,8 @@ export default function About({setOffsets}){
           새로운 기술을 빨리 익힐 수 있는 개발자가 되는 것을 목표로 열심히 공부하고 있습니다!
         </p>
         <div className={styles.linkBox}>
-          <a href="https://www.notion.so/2c01f65f48444e568a03b3fb397d5307" title="notion 이력서 보기">이력서 보러가기</a>
-          <a href="https://velog.io/@winbigcoms" title="velog보러가기">velog 보러가기</a>
+          <a href="https://www.notion.so/2c01f65f48444e568a03b3fb397d5307" rel="noreferrer" target="_blank" title="notion 이력서 보기">이력서 보러가기</a>
+          <a href="https://velog.io/@winbigcoms" rel="noreferrer" target="_blank" title="velog보러가기">velog 보러가기</a>
         </div>
       </div>
     </section>

@@ -3,7 +3,7 @@ const projects = [
     title:"EOTTEA CINEMA",
     mainImg:{
       link:"https://eottaecinema.herokuapp.com/",
-      title:"옷떼시네마 페이지로 이동",
+      title:"옷떼시네마 프로젝트 상세 설명 보기",
       imgLink:"./assets/images/ET.png",
       alt:"옷떼시네마페이지뷰"
     },
@@ -36,9 +36,9 @@ const projects = [
     title:"COVID LIVE",
     mainImg:{
       link:"https://github.com/winbigcoms/covidLive",
-      title:"covidLive 깃허브로 이동",
+      title:"covidLive 프로젝트 상세설명 보기",
       imgLink:"./assets/images/covidLive.png",
-      alt:"covid Live 깃허브"
+      alt:"covid Live 프로젝트 이미지"
     },
     start : "2020-08-14",
     end:"2020-08-14",
