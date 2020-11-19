@@ -19,6 +19,7 @@ export default function Projects({setOffsets}){
   
   const openProjectModal = e=>{
     if(!e.target.id) return;
+    console.log("1")
     setModal(state=>e.target.id);
   }
 
@@ -28,8 +29,8 @@ export default function Projects({setOffsets}){
       <ul className={styles.projectsBox} onClick={openProjectModal}>
         {projects.map(project=>(
           <li key={project.title} className={styles.project} data-aos="fade-up">
-            <figure className={styles.projectImg} id={project.title}  href={project.mainImg.link}>
-              <img src={project.mainImg.imgLink} alt={project.mainImg.alt} loading="lazy" title={project.mainImg.title}/>
+            <figure className={styles.projectImg} href={project.mainImg.link}>
+              <img src={project.mainImg.imgLink} id={project.title} alt={project.mainImg.alt} loading="lazy" title={project.mainImg.title}/>
             </figure>
             <div className={styles.projectInfo}>
               <h3 className={styles.projectName}>{project.title}</h3>
