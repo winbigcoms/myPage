@@ -19,7 +19,6 @@ export default function Projects({setOffsets}){
   
   const openProjectModal = e=>{
     if(!e.target.id) return;
-    console.log("1")
     setModal(state=>e.target.id);
   }
 

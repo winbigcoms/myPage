@@ -31,6 +31,12 @@
       display: flex;
       li{
         margin-right: 15px;
+        a{
+          img{
+            width: 2rem;
+            height: 2rem;
+          }
+        }
       }
     }
   }
