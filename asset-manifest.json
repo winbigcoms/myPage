@@ -5,18 +5,18 @@
     "main.js.map": "/myPage/static/js/main.2ab5bef4.chunk.js.map",
     "runtime-main.js": "/myPage/static/js/runtime-main.a1424816.js",
     "runtime-main.js.map": "/myPage/static/js/runtime-main.a1424816.js.map",
-    "static/css/2.5097b6dc.chunk.css": "/myPage/static/css/2.5097b6dc.chunk.css",
+    "static/css/2.c9606f86.chunk.css": "/myPage/static/css/2.c9606f86.chunk.css",
     "static/js/2.4f904ab8.chunk.js": "/myPage/static/js/2.4f904ab8.chunk.js",
     "static/js/2.4f904ab8.chunk.js.map": "/myPage/static/js/2.4f904ab8.chunk.js.map",
     "index.html": "/myPage/index.html",
-    "static/css/2.5097b6dc.chunk.css.map": "/myPage/static/css/2.5097b6dc.chunk.css.map",
+    "static/css/2.c9606f86.chunk.css.map": "/myPage/static/css/2.c9606f86.chunk.css.map",
     "static/css/main.09fbe178.chunk.css.map": "/myPage/static/css/main.09fbe178.chunk.css.map",
     "static/js/2.4f904ab8.chunk.js.LICENSE.txt": "/myPage/static/js/2.4f904ab8.chunk.js.LICENSE.txt",
     "static/media/Main.module.scss": "/myPage/static/media/mainBg.bff012a7.png"
   },
   "entrypoints": [
     "static/js/runtime-main.a1424816.js",
-    "static/css/2.5097b6dc.chunk.css",
+    "static/css/2.c9606f86.chunk.css",
     "static/js/2.4f904ab8.chunk.js",
     "static/css/main.09fbe178.chunk.css",
     "static/js/main.2ab5bef4.chunk.js"
