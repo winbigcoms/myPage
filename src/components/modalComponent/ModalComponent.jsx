@@ -3,7 +3,6 @@ import styled, { keyframes } from 'styled-components';
 import {projectData} from "./projectModalData";
 import styles from './madalComponent.module.scss'
 import SimpleBarReact from "simplebar-react";
-
 import "simplebar/src/simplebar.css";
 const showModal = keyframes`
   0%{
