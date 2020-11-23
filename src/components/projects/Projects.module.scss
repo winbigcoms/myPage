@@ -1,4 +1,24 @@
 @import "../../assets/styles/DefaultStyleVariables.scss";
+@keyframes twinkle{
+  0%{
+    opacity: 1;
+    transform: scale(1);
+  }
+  25%{
+    opacity: 0;
+  }
+  50%{
+    opacity: 1;
+    transform: scale(1.2);
+  }
+  75%{
+    opacity: 0;
+  }
+  100%{
+    transform: scale(1);
+    opacity: 1;
+  }
+}
 .projects{
   width:100%;
   padding-top: 50px;
@@ -6,13 +26,17 @@
     position: relative;
     text-align: center;
     font-size: 4rem;
-    &::after{
+    &::before{
       content: "★";
       position: absolute;
       color: gold;
       top: 15px;
       right: calc(50% - 1.7rem);
-      font-size: 1.1rem;
+      font-size: 1.2rem;
+      transition: all 1s;
+    }
+    &:hover::before{
+      animation: twinkle ease 1.5s;
     }
   }
   .projectsBox{
