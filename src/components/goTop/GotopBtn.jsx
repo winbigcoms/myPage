@@ -24,6 +24,6 @@ export default function GotopBtn(){
     })
   }
   return (
-    <button className={isSee? [styles.btn,styles.active].join(" ") :styles.btn} onClick={goTop}></button>
+    <button className={isSee? [styles.btn,styles.active].join(" ") :styles.btn} onClick={goTop} aria-label="goTopButton"></button>
   )
 }

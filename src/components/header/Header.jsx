@@ -58,27 +58,27 @@ export default function Header({offsets}){
   return(
     <header className={navBtnState?style.off:style.on}>
       <h2 className="a11yHidden">메인 네비게이션</h2>
-      <button className={navVisibleState ? style.openBtn:style.defaultBtn} onClick={toggleNav}>
+      <button className={navVisibleState ? style.openBtn:style.defaultBtn} onClick={toggleNav} aria-label="mobileNaviControlButton">
         <span className={style.buger}></span>
         <span className={style.buger}></span>
       </button>
       <ul className={navVisibleState ? [style.header,style.openNav].join(" "): firstClick.current ? style.header :style.firstHeader} onClick={scrolling}>
-        <li id="main">
+        <li id="main" tabIndex="0">
             Home
         </li>
-        <li id="about">
+        <li id="about" tabIndex="0">
           About
         </li>
-        <li id="skills">
+        <li id="skills"tabIndex="0"> 
           Skills
         </li>
-        <li id="project">
+        <li id="project" tabIndex="0">
           Project
         </li>
-        <li id="contact">
+        <li id="contact" tabIndex="0">
           Contact
         </li>
-        <li>
+        <li >
           <a href="https://github.com/winbigcoms?tab=repositories" title="백승일 깃허브로 이동!">
             more...?
           </a>
