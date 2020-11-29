@@ -23,8 +23,8 @@ const Article = styled.article`
 `
 const CloseBtn = styled.button`
   position:fixed;
-  top:18%;
-  right:15%;
+  top:16%;
+  right:14%;
   width: 3%;
   height: 3%;
   padding: 0;

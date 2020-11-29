@@ -20,6 +20,7 @@
         right: 1rem;
         font-size: 1.1rem;
         transition: all ease 1s;
+        cursor: text;
       }
       &:hover::after{
         transform: rotateY(720deg);

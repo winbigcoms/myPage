@@ -56,7 +56,7 @@ export default function Projects({setOffsets}){
           </li>
         ))}
       </ul>
-      {selectedProject?<ModalContainer projectName={selectedProject} modalClose={modalClose}/>:<></>}
+      {selectedProject&&<ModalContainer projectName={selectedProject} modalClose={modalClose}/>}
     </section>
   )
 }

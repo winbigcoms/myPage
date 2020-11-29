@@ -31,6 +31,7 @@
       right: calc(50% - 40px);
       font-size: 1.1rem;
       transition: transform ease 1s;
+      cursor: text;
     }
     &:hover::after{
       animation: star ease-in-out 0.7s;
