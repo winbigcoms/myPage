@@ -14,7 +14,8 @@ export default function Main({setOffsets}){
       } else {
         clearInterval(typing);
       }
-    },178)}
+    },178)
+  }
 
   useEffect(()=>{
     typeAni();

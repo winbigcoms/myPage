@@ -1,9 +1,10 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { lazy, Suspense, useEffect, useRef, useState } from "react";
 import useResizeRander from "../../customHooks/useResizeRander";
 import styles from './Projects.module.scss'
 import projects from './projectLint'
 import "aos/dist/aos.css"
 import { ModalContainer } from "../../container/modalContianer";
+
 export default function Projects({setOffsets}){
   const project = useRef(null);
   const [selectedProject, setModal] = useState("");

@@ -72,16 +72,35 @@ export default function Skills({setOffsets}){
           <h3>Server / Database</h3>
           <ul className={styles.skillBox}>
             <li data-aos="fade-up">
-              <span>Express</span>
+            <img src="./assets/images/node.png" alt="node.js"/>
               <ul className={styles.detailSkills}>
+                <li>Express</li>
                 <li>REST API</li>
-                <li>Router</li>
               </ul>
             </li>
             <li data-aos="fade-up" data-aos-delay="50">
               <img src="./assets/images/mysqllogo512.jpg" alt="mysql"/>
               <ul className={styles.detailSkills}>
                 <li>RDBMS</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li className={styles.skillSet} data-aos="fade-up">
+          <h3>On learning</h3>
+          <ul className={styles.skillBox}>
+          <li data-aos="fade-up">
+              <img src="./assets/images/reactlogo512.jpg" alt="react"/>
+              <ul className={styles.detailSkills}>
+                <li>React Native</li>
+                <li>hybrid app</li>
+              </ul>
+            </li>
+            <li data-aos="fade-up" data-aos-delay="50">
+              <img src="./assets/images/node.png" alt="node.js"/>
+              <ul className={styles.detailSkills}>
+                <li>socket.io</li>
+                <li>real time communication</li>
               </ul>
             </li>
           </ul>
