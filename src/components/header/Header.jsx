@@ -14,6 +14,12 @@ export default function Header({offsets}){
       top:offsets[e.target.id],
       behavior: "smooth"
     })
+    // const moveId = e.target.id.slice(0,e.target.id.length-1);
+    // const targetEle = document.querySelector(`#${moveId}`);
+    // targetEle.scrollIntoView({
+    //   behavior:"smooth",
+    //   block:"start"
+    // })
   },[offsets]);
   // 뷰포트 변경시 모바일 뷰 해제
   useLayoutEffect(()=>{
